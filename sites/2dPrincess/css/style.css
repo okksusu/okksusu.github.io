@@ -1,0 +1,494 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p{
+  font-family: 'Aleo', serif;
+}
+
+section {
+  width: 100%; height: 100vh; padding: 10vh 10vw;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: space-around;
+  font-size: 3vmin;
+  overflow: hidden;
+  position: relative;
+}
+
+h1 { font-size: 10vmin; 
+  font-family: 'Aleo', serif;}
+
+.author { font-size: 4vmin; }
+
+div p { margin: 1em 0; }
+
+/* PreLoader */
+#preloader {
+  background: #FFF;
+  font-family: 'Aleo', serif;
+  position: fixed;
+  top:0;
+  left: 0;
+  z-index: 10;
+}
+
+#preloader.loaded {
+  opacity: 0;
+  transition: opacity 1s;
+  pointer-events: none;
+}
+
+/* Navigation */
+
+nav {
+  position: fixed;
+  bottom:2vmin; left: 2vmin;
+  z-index: 5;
+}
+
+nav a {
+  display: block; width: 5vmin; height: 5vmin; margin-bottom: 2vmin;
+  background: rgba( 0, 0, 0, 0 ); color: #fff;
+  border:3px solid #78B47B; border-radius: 50%;
+	text-decoration: none;
+	transition: 0.5s;
+}
+
+nav .selected { background:rgba( 94,206,106,1 ); }
+
+
+/* Home Page*/
+
+#home {
+  background: #FFE3D3;
+  background-blend-mode: multiply; background-size:cover;
+  color: #fff;
+}
+
+#home #logo {
+  position: absolute;
+  text-align: left;
+  width: 8vmin;
+  top: 4vmin;
+  left: 4vmin;
+}
+
+#title1TEXT{
+  position: absolute;
+  margin-top: -30vmin;
+}
+
+#title2TEXT{
+  position: absolute;
+}
+
+#peaJump {
+  position: absolute;
+  text-align: right;
+  margin-bottom: -80vmin;
+  right: 4vmin;
+}
+/* INTRO************/
+
+#intro {
+  background: #FFFEF0;
+  background: linear-gradient( rgba(255,227,211,1), rgba( 255, 254, 240, 1 ) );
+  color: #fff;
+  width: 100%; height: 50vh; padding: 5vh 5vw;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: space-around;
+  font-size: 1vmin;
+  overflow: hidden;
+  position: relative;
+}
+
+#intro p {
+  color: #000;
+  font-size: 3vmin;
+}
+
+/* Prince on earth */
+
+#earth {
+  float: left;
+  background:  rgba( 28, 23, 58, 1 ) ;
+  background-size:cover;
+  color: #fff;
+}
+
+#earth #travel {
+  position: absolute;
+  margin-top: -80vmin;
+  margin-left: -100vmin;
+}
+
+#earth #anim1 {
+  display: block;
+  position: absolute;
+  margin-top: 10vmin;
+  margin-left: auto;
+  margin-right: auto;
+}
+#earth #cloud1 {
+  display: block;
+  position: absolute;
+  margin-top: -20vmin;
+  margin-left: -50vmin;
+  animation: cloud1ani 2s infinite;
+}
+
+@keyframes cloud1ani {
+  0% { transform: scaleY(1); transform: scaleX(1);}
+  50% { transform: scaleY(1.05); transform: scaleX(1.05);}
+  100% { transform: scaleY(1); transform: scaleX(1); }
+}
+
+#earth #cloud2 {
+  display: block;
+  position: absolute;
+  margin-top: 65vmin;
+  margin-left: 52vmin;
+  animation: cloud2ani 3s ease-out infinite;
+}
+
+@keyframes cloud2ani {
+  0% { transform: scaleY(1); transform: scaleX(1);}
+  50% { transform: scaleY(1.05); transform: scaleX(1.05);}
+  100% { transform: scaleY(1); transform: scaleX(1); }
+}
+
+#worldTEXT {
+  position: absolute;
+  margin-top: -80vmin;
+  margin-left: -100vmin;
+}
+
+#realTEXT {
+  position: absolute;
+  margin-bottom: -17vmin;
+  margin-right: -120vmin;
+}
+
+/* Princess at gate*/
+
+#gate {
+  background: linear-gradient( rgba( 28, 23, 58, 1 ), rgba( 40, 70, 98, 1 ) );
+  width: 100%; height: 110vh;
+  padding: 0;
+  background-size: cover;
+}
+
+#gatePIC {
+  width: 100%;
+  bottom: 0px;
+  left: 0px;
+}
+
+#gate #gCloud1 {
+  position: absolute;
+  margin-top: -90vmin;
+  margin-left: -70vmin;
+  width: 50vmin;
+}
+#gate #gCloud2 {
+  position: absolute;
+  margin-top: -60vmin;
+  margin-right: -130vmin;
+  width: 40vmin;
+}
+#gate #gCloud3 {
+  position: absolute;
+  margin-top: -20vmin;
+  margin-left: -130vmin;
+  width: 20vmin;
+}
+
+#gate #rain {
+  position: absolute;
+  animation: raining 2s ease-out 1 forwards paused;
+}
+
+@keyframes raining {
+  0% { transform: translateY(-20vh);}
+  100% {transform: translateY(90vh); }
+}
+
+#terribleTEXT {
+  position: absolute;
+  margin-top: -60vmin;
+  margin-left: -90vmin;
+  z-index: 1;
+}
+#knockTEXT {
+  position: absolute;
+  margin-top: -30vmin;
+  margin-right: -110vmin;
+  z-index: 1;
+}
+#gateTEXT {
+  position: absolute;
+  margin-top: 90vmin;
+  margin-right: -110vmin;
+  z-index: 1;
+}
+
+/*  queen */
+#queen {
+  background: #FFFEF0;
+  background-blend-mode: multiply; background-size:cover;
+  color: #fff;
+  width: 100%; height: 50vh; padding: 5vh 5vw;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: space-around;
+  font-size: 1vmin;
+  overflow: hidden;
+  position: relative;
+}
+
+#queenimg {
+  margin-bottom: 10vmin;
+  margin-right: -140vmin;
+  height: 70%;
+}
+
+#realQueenTEXT {
+  position: absolute;
+  width: 100vmin;
+}
+/*  bed */
+
+#bed-scroll {
+  position: relative;
+  height: 300vh;
+}
+
+#bed {
+  background: #FFFEF0;
+}
+
+#peaBedTEXT {
+  position: absolute;
+  margin-top: -50vmin;
+  margin-left: -100vmin;
+}
+
+#t2020TEXT{
+  position: absolute;
+  margin-bottom: -10vmin;
+  margin-right: -120vmin;
+}
+
+/*  chat */
+
+#chat {
+  background:#FFD2B1;
+  width: 100%; height: 80vh; padding: 5vh 5vw;
+  background-blend-mode: overlay, normal;
+  background-size: cover;
+  color: #fff;
+  text-shadow: 0 1px 3px #000;
+}
+ #chat1 {
+  position: absolute;
+  margin-top: -30vmin;
+  margin-right: -90vmin;
+ }
+
+ #chat2{
+  position: absolute;
+  margin-top: 30vmin;
+  margin-left: -90vmin;
+ }
+/*  marriage */
+
+#marriage {
+  background:#FFFEF0;
+}
+
+#weddingPIC {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+#bride {
+  position: absolute;
+  bottom: 0;
+  margin-right: -50vmin;
+}
+
+#groom {
+  position: absolute;
+  bottom: 0;
+  margin-left: -50vmin;
+}
+
+#heart{
+  position: absolute;
+}
+
+#real2020 {
+  position: absolute;
+  z-index: 1;
+  margin-top: -70vmin;
+  margin-left: -90vmin;
+}
+
+#sensitive {
+  position: absolute;
+  z-index: 1;
+  margin-top: 12vmin;
+  margin-right: -121vmin;
+}
+/*  footer */
+
+#footer {
+  background: #FF9A9A;
+  width: 100%; height: 150vh; padding: 5vh 5vw;
+}
+
+#peaMuseum{
+  position: absolute;
+  margin-top: -130vmin;
+}
+
+#peaQ{
+  position: absolute;
+  width: 80vmin;
+  margin-top: -30vmin;
+}
+
+#peaForm {
+  position: absolute;
+  bottom: 6vmin;
+  right: 6vmin;
+  background: #D8D8D8;
+  padding: 6vmin;
+  border-radius: 10px;
+}
+
+#error {
+  font-family: 'Aleo', serif;
+  border: 2px solid #f00;
+  background-color: #fcc;
+  padding: 10px;
+  border-radius: 5px;
+  /* hide the error  */
+  visibility: hidden;
+  /* set the animation start state */
+  padding: 0px 10px;
+  max-height: 0px;
+  opacity: 0;
+  overflow: hidden;
+
+  transition: 0.5s;
+}
+
+#error.show {
+  font-family: 'Aleo', serif;
+  /* show the error */
+  visibility: visible;
+  /* set the animation end state */
+  padding: 8px;
+  max-height: 100px;
+  opacity: 1;
+  font-size: 18px;
+}
+
+#success {
+  font-family: 'Aleo', serif;
+  border: 2px solid #00BC1E;
+  background-color: #9AC98A;
+  padding: 10px;
+  border-radius: 5px;
+  /* hide the error  */
+  visibility: hidden;
+  /* set the animation start state */
+  padding: 0px 10px;
+  max-height: 0px;
+  opacity: 0;
+  overflow: hidden;
+
+  transition: 0.5s;
+}
+
+#success.show {
+  font-family: 'Aleo', serif;
+  /* show the error */
+  visibility: visible;
+  /* set the animation end state */
+  padding: 8px;
+  max-height: 100px;
+  opacity: 1;
+  font-size: 18px;
+}
+
+label,
+output,
+button {
+  padding: 2vmin;
+  position: static;
+}
+
+input,
+button {
+  font-size: 18px;
+  -webkit-appearance: none;
+}
+
+input[type=text] {
+  border: 1px solid #fff;
+  padding: 5px;
+  background: linear-gradient(hsl(240, 30%, 95%), hsl(240, 30%, 100%));
+  text-align: center;
+  border-radius: 10px;
+}
+
+input[type=text]:focus {
+  outline: 0px;
+  border-color: #00BC1E;
+  box-shadow: 0px 0px 0px 3px hsl(240, 50%, 90%);
+}
+
+#guess {
+  width: 200px;
+  background: #fff;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  position: relative;
+  text-align: center;
+  top: 11px;
+}
+
+::-webkit-slider-runnable-track {
+  background: #fff;
+  border: 1px solid #fff;
+  border-radius: 10px;
+}
+
+::-webkit-slider-thumb {
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  background: #00BC1E;
+  box-shadow: 0 1px 2px hsl( 0, 0%, 0%, 0.5);
+  position: relative;
+}
+
+input [type = checkbox]{
+  accent-color: red;
+}
+
+#clearButton, #submitButton {
+  font-family: 'Aleo', serif;
+  border: 1px solid #78B47B;
+  border-radius: 20px;
+  background: #78B47B;
+  padding: 1.5vmin;
+}

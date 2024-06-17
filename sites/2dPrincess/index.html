@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Princess and the Pea</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Aleo&display=swap" rel="stylesheet">
+  <link rel="stylesheet" media="screen" href="css/style.css" />
+
+</head>
+
+<body>
+
+  <section id="preloader">
+    <img loading="lazy" id="loading" src="media/loading.gif" height="200vmin">
+    <p>Loading...</p>
+  </section>
+  <nav>
+    <a href="#home" class="selected"></a>
+    <a href="#earth"></a>
+    <a href="#gate"></a>
+    <a href="#bed"></a>
+    <a href="#marriage"></a>
+    <a href="#footer"></a>
+  </nav>
+
+  <!--HOME-->
+  <section id="home"> 
+    <img loading="lazy" id="logo" src="images/logo.png">
+    <canvas id="title1TEXT"  width = "500vh" height="150vh"></canvas>
+    <canvas id="title2TEXT"  width = "500vh" height="150vh"></canvas> 
+    <canvas id="peaJump"  width = "500vh" height="300vh"></canvas> 
+    <audio id="peaBoing" src="media/peaBoing.mp3"></audio>
+  </section>
+
+  <!--INTRO-->
+  <section id="intro">
+    <canvas id="introTEXT"  width = "600vh" height="200vh"></canvas>
+  </section>
+
+  <!--EARTH-->
+  <section id="earth">
+    <canvas id="worldTEXT"  width = "500vh" height="300vh"></canvas>
+    <canvas id="anim1" width = "550" height="850"></canvas>
+    <img loading="lazy" id="cloud1" src="images/cloud1.png">
+    <img loading="lazy"id="cloud2" src="images/cloud2.png">
+    <canvas id="realTEXT"  width = "400vh" height="150vh"></canvas>
+  </section>
+
+  <!--GATE-->
+  <section id="gate">
+    <canvas id="terribleTEXT"  width = "500vh" height="300vh"></canvas>
+    <canvas id="knockTEXT"  width = "500vh" height="300vh"></canvas>
+    <canvas id="gateTEXT"  width = "500vh"  height="300vh"></canvas>
+    <img loading="lazy" id="gCloud1" src="images/gCloud1.png">
+    <img loading="lazy"id="gCloud2" src="images/gCloud2.png">
+    <img loading="lazy"id="gCloud3" src="images/gCloud3.png">
+    <img loading="lazy"id="gatePIC" src="images/gate.svg">
+    <img loading="lazy" id="rain" src="images/rain.svg">
+  </section>
+
+  <!--QUEEN-->
+  <section id="queen">
+    <img loading="lazy" id="realQueenTEXT" src="images/realQueen.svg">
+    <img data-aos="fade-left" id="queenimg" src="images/queen.png">
+  </section>
+
+
+  <!--BED  -->
+  <div id="bed-scroll">
+    <section id="bed">
+      <canvas id="bedRIVE" width = "900vh" height="900vh"></canvas>
+      <canvas id="peaBedTEXT" width = "500vh"  height="300vh"></canvas>
+      <canvas id="t2020TEXT" width = "600vh"  height="150vh"></canvas>
+    </section>
+  </div>
+
+  <!--CHAT-->
+  <section id="chat">
+    <img data-aos="fade-left" id="chat1" src="images/queenBubble.png" width = "650vh"  >
+    <img data-aos="fade-right" id="chat2" src="images/princessBubble.png" width = "650vh"  >
+  </section>
+  
+  <!--MARRIAGE-->
+  <section id="marriage">
+    <canvas id="real2020" width = "600vh"  height="200vh"></canvas>
+    <img id="weddingPIC" src="images/wedding.svg">
+    <img data-aos="zoom-in" id="heart" src="images/heart.svg">
+    <img data-aos="fade-left" id="bride" src="images/princess.svg">
+    <img data-aos="fade-right" id="groom" src="images/prince.svg">
+    <canvas id="sensitive" width = "400vh"  height="150vh"></canvas>
+  </section>
+
+  <!--FOOTER-->
+  <section id="footer">
+    <canvas id="peaMuseum" width = "700vh"  height="150vh"></canvas>
+    <img id="peaQ" src="images/peaQ.png">
+    
+    <form action="" id="peaForm">
+      <div id="error"> Enter you name please.</div>
+      <div id="success"> Nice guess!</div>      
+      <!--- name --->
+      
+      <br><p>
+        <label for="username"> Name: </label>
+        <input type="text" id="username">
+        <button type = "button" id="clearButton"> Clear </button>
+      </p>
+
+      <!--- slider --->
+      <p>
+        <label for="number"> Your guess: </label>
+        <input type="range" id="guess" min="1" max="20" value="5" step="1" >
+        <output id="guessOutput"> 5 </output>
+      </p><br>
+
+      <p>
+        <button type="submit" id="submitButton"> Submit Form </button>
+      </p>
+    </form>
+  </section>
+
+  <!--SCRIPTS-->
+  <script src="https://unpkg.com/@rive-app/canvas@1.0.79"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src= "https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/form.js"></script>
+</body>
+
+</html>
+
+<!--
+https://www.npmjs.com/package/rive-js/v/0.7.30
+
+https://stackoverflow.com/questions/44229594/how-to-pin-and-unpin-an-element-using-js
+-->

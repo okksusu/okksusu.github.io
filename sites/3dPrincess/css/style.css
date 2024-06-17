@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.controls{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 100px;
+    height: 100px;
+}
+.music {
+    width: 100px;
+    height: 100px;
+}
+  
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url('../../images/thebackgorun.png');
+    background-color: rgb(23, 255, 100); */
+    background-image: radial-gradient(rgb(255, 255, 255), #ccc);
+    perspective: 1000px;
+}
+
+.scene, .object {
+    transform-style: preserve-3d;
+    user-select: none;
+}
+
+.scene {
+    width: 350px;
+    height: 500px;
+    transform: rotateY(-50deg);
+}
+
+.object {
+    position: absolute;
+}
+
+.book, .bookTEST {
+    width:350px; 
+    height:500px; 
+}
+
+.bed {
+    width:200px; 
+    height:300px; 
+    transform: rotateY(90deg) translate3d(0px,0px,0px);
+    transform-origin: center center 0px;
+}
+
+.bedTurn {
+    animation: bedTurn 2s linear ;
+}
+@keyframes bedTurn {
+    0% { transform: rotateY(90deg) translate3d(0px,0px,0px)}
+    100% { transform: rotateY(0deg) translate3d(0px,0px,0px);}
+}
+
+.mattress {
+    width:190px; 
+    height:200px; 
+    transform: rotateY(90deg) translate3d(0px,0px,0px);
+    transform-origin: center center 0px;
+}
+
+.mattressTurn {
+    animation: mattressTurn 2s linear ;
+}
+@keyframes mattressTurn {
+    0% { transform: rotateY(90deg) translate3d(0px,0px,0px)}
+    100% { transform: rotateY(0deg) translate3d(0px,0px,0px);}
+}
+
+.princess {
+    width:170px; 
+    height:75px; 
+    transform: rotateY(90deg) rotateZ(0deg) translate3d(0px,0px,0px);
+    transform-origin: center center 0px;
+}
+
+.princessTurn {
+    animation: princessTurn 2s linear ;
+}
+@keyframes princessTurn {
+    0% { transform: rotateY(90deg) translate3d(0px,0px,0px)}
+    100% { transform: rotateY(0deg) translate3d(0px,0px,0px);}
+}
+
+.drawer {
+    width:50px; 
+    height:100px; 
+    transform: rotateY(90deg) translate3d(0px,0px,0px);
+    transform-origin: center center 0px;
+}
+
+.drawerTurn {
+    animation: drawerTurn 2s linear ;
+}
+@keyframes drawerTurn {
+    0% { transform: rotateY(90deg) translate3d(0px,0px,0px)}
+    100% { transform: rotateY(0deg) translate3d(0px,0px,0px);}
+}
+
+.deco {
+    width:80px; 
+    height: 170px; 
+    transform: rotateY(90deg) translate3d(0px,0px,0px);
+    transform-origin: center center 0px;
+}
+.decoTurn {
+    animation: decoTurn 2s linear ;
+}
+@keyframes decoTurn {
+    0% { transform: rotateY(90deg) translate3d(0px,0px,0px)}
+    100% { transform: rotateY(0deg) translate3d(0px,0px,0px);}
+}
+
+.pull {
+    width:75px; 
+    height: 35px; 
+    transform: rotateY(90deg) translate3d(0px,0px,0px);
+    transform-origin: center center 0px;
+}
+.pullTurn {
+    animation: pullTurn 2s linear ;
+}
+@keyframes pullTurn {
+    0% { transform: rotateY(90deg) translate3d(0px,0px,0px)}
+    100% { transform: rotateY(0deg) translate3d(0px,0px,0px);}
+}
+
+.paper,
+.pull{
+    position: absolute;
+}
+
+.object.bookTEST {
+    transform: rotateY(90deg) translate3d(0px,0px,0px);
+    transform-origin: center center 0px;
+}
+
+.bookTurn {
+    animation: bookTurn 2s linear ;
+}
+@keyframes bookTurn {
+    0% { transform: rotateY(90deg) translate3d(0px,0px,0px)}
+    100% { transform: rotateY(0deg) translate3d(0px,0px,0px);}
+}
+
+.bookTEST .windowGIF { transform: rotateY(90deg) translate3d(-270px,25px,99px);}
+.bookTEST .frontPage { transform: rotateY(263deg) translate3d(182px,0px,8px);}
+.bookTEST .window { transform: rotateY(90deg) translate3d(-175px,0px,0px);}
+.bookTEST .leftPages { transform: rotateY(0deg) translate3d(124px,0px,349px);}
+.bookTEST .leftCorner { transform: rotateY(90deg) rotateX(90deg) translate3d(-174px,-23px,25px);}
+.bookTEST .leftCornerB { transform: rotateY(90deg) rotateX(90deg) translate3d(-174px,-23px,-475px);}
+
+.book .painting { transform: rotateY(0deg) translate3d(175px,0px,0px);}
+.book .mouse { transform: rotateY(0deg) translate3d(410px,349px,-1px);}
+.book .rightPages { transform: rotateY(90deg) translate3d(23px,0px,499px);}
+.book .rightCorner { transform: rotateY(185deg) rotateX(90deg) translate3d(-173px,-10px,23px);}
+.book .rightCornerB { transform: rotateY(186deg) rotateX(90deg) translate3d(-173px,-16px,-474px);}
+.book .paintingPull { transform: rotateY(0deg) translate3d(361px,0px,-1px); z-index: 1;}
+
+.pull { z-index: 1;}
+
+.pull .princessTab { transform: rotateY(0deg) rotateX(90deg) translate3d(264px,94px,-224px);}
+
+.bed .bedFrameL { transform: rotateY(90deg) translate3d(-99px,200px,195px);}
+.bed .bedFrameS { transform: rotateY(0deg) translate3d(176px,200px,196px);}
+.bed .bedFrameLI { transform: rotateY(90deg) translate3d(-99px,200px,75px);}
+.bed .bedFrameSI { transform: rotateY(0deg) translate3d(176px,200px,3px);}
+.bed .pea { transform: rotateY(90deg) rotateX(0deg)  translate3d(-87px,410px,287px);}
+
+.princess .princessF { transform: rotateY(90deg) rotateX(30deg) translate3d(-104px,235px,55px);}
+.princess .princessH { transform: rotateY(90deg) rotateX(150deg) translate3d(-104px,-90px,-201px);}
+.princess .princessB { transform: rotateY(90deg) rotateX(90deg) translate3d(-101px,149px,-208px);}
+
+.mattress .mattressL { transform: rotateY(90deg) translate3d(-99px,240px,199px);}
+.mattress .mattressS { transform: rotateY(0deg) translate3d(179px,240px,193px);}
+.mattress .mattressT { transform: rotateY(0deg) rotateX(90deg) translate3d(184px,99px,-146px);}
+.mattress .peaTab { transform: rotateY(90deg) rotateX(0deg) translate3d(-181px,404px,248px);}
+
+.deco .ladder { transform: rotateY(0deg) rotateX(14deg) translate3d(195px,283px,162px);}
+
+.drawer .lamp { transform: rotateY(0deg) rotateX(0deg) translate3d(356px,334px,25px); z-index: 3;}
+.drawer .lampOn { transform: rotateY(0deg) rotateX(0deg) translate3d(356px,334px,25px); opacity: 0;}
+
+.turnLampOn {
+    animation: powerOn 1s linear ;
+}
+@keyframes powerOn {
+    0% { opacity: 0;}
+    100% { opacity: 1;}
+}
+.drawer .lampC { transform: rotateY(0deg) rotateX(90deg) translate3d(357px,-13px,-310px);}
+.drawer .drawerFront { transform: rotateY(0deg) rotateX(0deg) translate3d(353px,400px,47px);}
+.drawer .drawerSide { transform: rotateY(90deg) rotateX(0deg) translate3d(-25px,401px,378px);}
+.drawer .drawerSideInner { transform: rotateY(90deg) rotateX(0deg) translate3d(-25px,401px,329px);}
+.drawer .drawerTop { transform: rotateY(0deg) rotateX(90deg) translate3d(353px,25px,-382px);}

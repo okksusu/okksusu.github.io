@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Princess and the Pea</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="controls">
+        <div class="music">
+            <img id="musicIMG" src="images/musicOn.png" width=50px height=50px/>
+            <audio autoplay id="backgroundAudio" src="media/backgroundMusic.mp3" loop></audio>
+        </div>
+    </div>
+    <div class="scene">
+        <div class="object book">
+            <img class="paper painting" src="images/bookPainting.png" width=350px height=500px/>
+            <img class="paper mouse" src="images/mousePEep.gif" width=100px height=150px/>
+            <img class="paper rightPages" src="images/rightPaper.png" width=50px height=500px/>
+            <img class="paper rightCorner" src="images/rightCorner.png" width=350px height=50px/>
+            <img class="paper rightCornerB" src="images/rightCorner.png" width=350px height=50px/>
+            <img class="paper paintingPull" src="images/paintPull.png" width=200px height=250px/>
+        </div>
+        <div class="object bookTEST" id="testing">
+            <audio id="bookOpenSoundEffect" src="media/bookOpen.mp3"></audio>
+            <img class="paper windowGIF" src="images/bck.gif" width=150px height=200px/>
+            <img class="paper frontPage" src="images/frontPage.png" width=350px height=500px />
+            <img class="paper window" src="images/bookWindow.png" width=350px height=500px />
+            <img class="paper leftPages" src="images/leftPaper.png" width=50px height=500px/>
+            <img class="paper leftCorner" src="images/leftCorner.png" width=350px height=50px/>
+            <img class="paper leftCornerB" src="images/leftCorner.png" width=350px height=50px/>
+        </div>
+        <div class="object pull" id="pulling">
+            <img class="paper princessTab" src="images/pullTab.png" width="75px" height="35px"/>
+        </div>
+
+        <div class="object bed" id="bedding">
+            <img class="paper bedFrameL" src="images/bedLong.png" width=200px height=300px/>
+            <img class="paper bedFrameS" src="images/bedShort.png" width=120px height=300px/>
+            <img class="paper bedFrameLI" src="images/bedLong.png" width=200px height=300px/>
+            <img class="paper bedFrameSI" src="images/bedShort.png" width=120px height=300px/>
+            <img class="paper pea" src="images/pea.png" width="20px" height="20px"/>
+        </div>
+
+        <div class="object princess" id="princessing">
+            <img class="paper princessF" src="images/princessFront.png" width=170px height=75px/>
+            <img class="paper princessB" src="images/princessBack.png" width=170px height=75px/>
+            <img class="paper princessH" src="images/princessBottom.png" width=170px height=75px/>
+        </div>
+
+        <div class="object mattress" id="mattressing">
+            <img class="paper mattressL" src="images/mattressLong.png" width=190px height=200px/>
+            <img class="paper mattressS" src="images/mattressShort.png" width=110px height=200px/>
+            <img class="paper mattressT" src="images/mattressTop.png" width=110px height=190px/>
+            <img class="paper peaTab" src="images/pullTab.png" width="75px" height="35px"/>
+        </div>
+
+        <div class="object deco" id="decoing">
+            <img class="paper ladder" src="images/ladder.png" width=80px height=270px/>
+
+        </div>
+        <div class="object drawer" id="drawing">
+            <audio id="lampOnSoundEffect" src="media/lamp.mp3"></audio>
+            <img class="paper lamp" id="lampID" src="images/lamp.png" width=50px height=75px/>
+            <img class="paper lampOn" id="lampREF"src="images/lampOn.png" width=50px height=75px/>
+            <img class="paper lampC" src="images/lampConnect.png" width=50px height=75px/>
+            <img class="paper drawerFront" src="images/drawerFront.png" width=50px height=100px/>
+            <img class="paper drawerSide" src="images/drawerSide.png" width=50px height=100px/>
+            <img class="paper drawerSideInner" src="images/drawerSide.png" width=50px height=100px/>
+            <img class="paper drawerTop" src="images/drawerTop.png" width=50px height=50px/>
+        </div>
+
+    </div>
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/scene.js"></script>
+    
+</body>
+</html>
