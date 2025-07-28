@@ -345,6 +345,7 @@ h6 {
     font-size: 60px;
     bottom: 150px;
     position: relative;
+    width: 100%;
   }
 
   #hero p {
