@@ -5,7 +5,15 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
-
+@font-face {
+    font-family: 'Above the Beyond';
+    src: local('Above the Beyond Script'), local('Above-the-Beyond-Script'),
+        url('../AbovetheBeyond-Script/AbovetheBeyond-Script.woff2') format('woff2'),
+        url('../AbovetheBeyond-Script/AbovetheBeyond-Script.woff') format('woff'),
+        url('../AbovetheBeyond-Script/AbovetheBeyond-Script.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -133,12 +141,6 @@ h6 {
     background: #fff;
     border-right: 1px solid #e6e9ec;
     left: -300px;
-  }
-}
-
-@media (min-width: 991px) {
-  #main {
-    margin-left: 100px;
   }
 }
 
@@ -274,20 +276,20 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/port.JPG") top center no-repeat;
+  background: url("../img/invitation/heroImage.png") top center no-repeat;
   background-size: cover;
   position: relative;
 }
 
 @media (min-width: 992px) {
   #hero {
-    padding-left: 160px;
+    
   }
 }
 
 #hero:before {
   content: "";
-  background: rgba(255, 255, 255, 0.8);
+  /* background: rgba(255, 255, 255, 0.8); */
   position: absolute;
   bottom: 0;
   top: 0;
@@ -296,11 +298,13 @@ h6 {
 }
 
 #hero h1 {
-  margin: 0;
-  font-size: 64px;
-  font-weight: 700;
-  line-height: 56px;
-  color: #45505b;
+  font-family: Above the Beyond, sans-serif;
+  bottom: 120px;
+  position: relative;
+  font-size: 100px;
+  font-weight: 0;
+  color: white;
+  text-align: center;
 }
 
 #hero p {
@@ -338,8 +342,9 @@ h6 {
   }
 
   #hero h1 {
-    font-size: 32px;
-    line-height: 36px;
+    font-size: 60px;
+    bottom: 150px;
+    position: relative;
   }
 
   #hero p {
@@ -349,17 +354,78 @@ h6 {
   }
 }
 
+
+#invitation {
+  width: 50%;
+  margin: auto;
+}
+
+@media (max-width: 992px) {
+  #invitation {
+    width: 100%;
+  }
+}
+
+
+#location {
+  width: 50%;
+  margin: auto;
+}
+
+@media (max-width: 992px) {
+  #location {
+    width: 100%;
+  }
+}
+
+#calendar {
+  width: 50%;
+  margin: auto;
+}
+
+@media (max-width: 992px) {
+  #calendar {
+    width: 100%;
+  }
+}
+
+#RSVP {
+  width: 50%;
+  margin: auto;
+  padding-bottom: 50px;
+}
+
+@media (max-width: 992px) {
+  #RSVP {
+    width: 100%;
+  }
+}
+
+.button {
+  background-color: #85bde7;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  margin: auto;
+  cursor: pointer;
+  width: 50%;;
+}
+
+
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
+  padding-top: 60px 0;
   overflow: hidden;
 }
 
 .section-title {
   text-align: center;
-  padding-bottom: 30px;
+  padding-top: 30px;
 }
 
 .section-title h2 {
@@ -741,8 +807,8 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #f7f8f9;
-  color: #c7a27c;
+  background: #c6e6ff;
+  color: rgb(123, 123, 123);
   font-size: 14px;
   text-align: center;
   padding: 30px 0;

@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Above the Beyond';
+    src: local('Above the Beyond Script'), local('Above-the-Beyond-Script'),
+        url('AbovetheBeyond-Script.woff2') format('woff2'),
+        url('AbovetheBeyond-Script.woff') format('woff'),
+        url('AbovetheBeyond-Script.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
